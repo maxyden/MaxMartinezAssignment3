@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+.bars1 {
+  border: 5px double rgb(40, 0, 0) !important;
+}
+
+.bars2 {
+  border: 5px double rgb(80, 0, 0) !important;
+}
+
+.bars3 {
+  border: 5px double rgb(120, 0, 0) !important;
+}
+
+.bars4 {
+  border: 5px double rgb(160, 0, 0) !important;
+}
+
+.bars5 {
+  border: 5px double rgb(200, 0, 0) !important;
+}
+
+.bars6 {
+  border: 5px double rgb(115, 0, 0) !important;
+}
+
+.bars7 {
+  border: 5px double rgb(107, 0, 0) !important;
+}
+
+.bars8 {
+  border: 5px double rgb(100, 0, 0) !important;
+}
+
+.bars9 {
+  border: 5px double rgb(94, 0, 0) !important;
+}
+
+.bars10 {
+  border: 5px double rgb(88, 0, 0) !important;
+}
+
+.bars11 {
+  border: 5px double rgb(83, 0, 0) !important;
+}
+
+.bars12 {
+  border: 5px double rgb(79, 0, 0) !important;
+}
+
+.bars13 {
+  border: 5px double rgb(75, 0, 0) !important;
+}
+
+body {
+  color: rgb(203, 233, 245);
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 0px;
+  background-color: rebeccapurple;
+  background-image: url("background.jpg"); /*background image*/
+  background-size: cover;
+  padding: 10px;
+}
+
+.bar {
+  background-color: rgb(32, 27, 2);
+  border: 20px double rgb(26, 17, 8) !important;
+  font-family: "Fugaz One", cursive;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Fugaz One", cursive;
+  color: rgb(251, 188, 86);
+}
+
+.Img {
+  width: 50px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.Img2 {
+  width: 500px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.container { /* container for images/ boxes*/
+  position: relative;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Bungee Shade", cursive;
+  color: rgb(251, 188, 86);
+  font-size: 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.grid-item { /*grid item and it's properties*/
+  background-color: rgba(255, 0, 0, 0);
+  border: 3px double red;
+  padding: 10px;
+  font-size: 20px;
+}
+
+nav {
+  text-align: center;
+  text-indent: 0%;
+}
+
+a:link, a:visited { /*Using the guide to make the links into a button, Changed some elements like colors made them invisible */
+  background-color: rgba(255, 0, 0, 0);
+  color: rgb(251, 188, 86);
+  padding: 14px 25px;
+  text-align: left;
+  margin: auto;
+  text-decoration: none;
+  display: inline-block;
+  text-indent: 0%;
+  font-size: larger;
+}
+
+a:hover, a:active { /*When hovering over link changes from transparent to a red color */
+  background-color: rgb(7, 154, 125);
+}
+
+.long { /*long image*/
+  grid-row: 1/span 2;
+}
+
+.wide {
+  grid-column: 1/span 3;
+}
+
+@media screen and (max-width: 1400px) { /*change for shorter port 1400 px*/
+  .grid { /*general grid properties 2 column */
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgba(126, 53, 53, 0);
+    padding: 0px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .grid-item { /*grid item and it's properties*/
+    background-color: rgba(255, 0, 0, 0);
+    border: 3px double rgb(200, 0, 0);
+    padding: 0px;
+    font-size: 20px;
+  }
+  .wide {
+    grid-column: 1/span 2;
+  }
+  .Img2 {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 700px) { /*change for mobile view port 700 px*/
+  .grid { /*general grid properties, important to override 1400 grid*/
+    display: grid;
+    grid-template-columns: auto !important;
+    background-color: rgba(126, 53, 53, 0);
+    padding: 0px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .grid-item { /*grid item and it's properties*/
+    background-color: rgba(255, 0, 0, 0);
+    border: 3px double rgb(200, 0, 0);
+    padding: 0px;
+    font-size: 20px;
+  }
+  .wide {
+    grid-column: 1/1 !important;
+  }
+  .Img2 {
+    width: 350px !important;
+  }
+}/*# sourceMappingURL=main.css.map */

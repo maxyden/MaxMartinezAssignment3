@@ -1,0 +1,192 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+@for $i from 1 through 13 { // here is my for 
+  @if $i  < 6 {  //here is my if/else, it is simple checks for border color;
+
+
+  .bars#{$i} {
+      
+      border: 5px double rgb((($i*400)/10), 0, 0) !important;   //Conditional that changes the border color making it brighter then making it darker
+  
+  }
+  
+}
+ @else {
+  .bars#{$i} {
+    border: 5px double rgb((1500/($i+7)), 0, 0) !important; //this makes it darker
+  
+  }
+
+}
+
+}
+
+
+
+
+
+
+body {
+    color: $FontC;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    background-color: rebeccapurple;
+    background-image: url("background.jpg");  /*background image*/
+    background-size: cover;
+    padding: 10px;
+  }
+.bar{
+  background-color: rgb(32, 27, 2);   //bar for the navigation bar at top
+  border: 20px double rgb(26, 17, 8) !important; 
+  font-family: $fontHeader;
+
+}
+
+h2{
+  font-size: 40px;
+  font-family:  $fontHeader;
+  color: $Headerc;
+}
+
+.Img{
+  width: 50px;       //main img
+  margin-top: 30px;
+  align-items: center;
+
+}
+
+.Img2{
+  width: 500px;
+  margin-top: 30px;  //side img
+  align-items: center;
+
+}
+
+.container {   /* container for images/ boxes*/
+  position: relative;
+  width: 100%;
+}
+
+h1 {  
+   font-family: 'Bungee Shade', cursive;  //header 1, with imported font for title
+    color: $Headerc;
+    font-size: 70px;
+
+}
+
+.grid{   // grid 3 column
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: $invisible;
+    padding: 10px;
+   font-size: 25px; 
+   text-align: center;
+}
+
+.grid-item { /*grid item and it's properties*/
+    background-color: $invisible;
+    border: $Bordera;
+    padding: 10px;
+    font-size: 20px; 
+    
+}
+
+
+nav{ text-align:  center;  
+    text-indent: 0%;
+  
+  }
+
+  a:link, a:visited {  /*Using the guide to make the links into a button, Changed some elements like colors made them invisible */
+    background-color: $invisible;
+    color: $Headerc;
+    padding: 14px 25px;
+    text-align: left;  
+    margin: auto;
+    text-decoration: none;  
+    display: inline-block;
+    text-indent: 0%;
+    font-size: larger;
+  }
+  
+  a:hover, a:active {   /*When hovering over link changes from transparent to a red color */
+    background-color: rgb(7, 154, 125);
+
+
+  }
+
+  
+ .long { /*long image*/
+    grid-row: 1 /span 2 ;
+
+  }
+
+  .wide{  //wide img
+    grid-column: 1/span 3 ;
+  }
+  
+  @media screen and (max-width: 1400px){ /*change for shorter port 1400 px*/
+    .grid{ /*general grid properties 2 column */
+      display: grid;
+      grid-template-columns: auto auto;
+      background-color: rgba(126, 53, 53, 0);
+      padding: 0px;
+      font-size: 25px; 
+      text-align: center;
+     
+ }
+ .grid-item { /*grid item and it's properties*/
+   background-color: $invisible;
+   border: 3px double rgb(200, 0, 0);
+   padding: 0px;
+   font-size: 20px; 
+   
+
+}
+
+.wide{  //change to grid wide to work with new column amount
+ grid-column: 1/ span 2  ; 
+}
+
+.Img2{ 
+ width: 400px ;
+}
+}  
+
+
+
+  
+  @media screen and (max-width: 700px){ /*change for mobile view port 700 px*/
+    
+    
+    .grid{ /*general grid properties, important to override 1400 grid*/
+         display: grid;
+         grid-template-columns: auto !important;
+         background-color: rgba(126, 53, 53, 0);
+         padding: 0px;
+         font-size: 25px; 
+         text-align: center;
+        
+    }
+    .grid-item { /*grid item and it's properties*/
+      background-color: $invisible;
+      border: 3px double rgb(200, 0, 0);
+      padding: 0px;
+      font-size: 20px; 
+      
+  
+  }
+
+  .wide{  //change to grid wide to work with new column amount
+    grid-column: 1/ 1 !important;
+  }
+
+  .Img2{   //Img lowered
+    width: 350px !important;
+  }
+  }  
+
+//3rd Viewport is evry screen bigger than 1400px
